@@ -56,21 +56,21 @@ This project is a CRUD (Create, Read, Update, Delete) API for managing super her
 - Response:
    ```bash
 	[
-    {
-        "id": "5dfee45c-37e4-4442-80b2-6488a75d5b8c",
-        "name": "Ana",
-        "heroName": "Giant",
-        "birthDate": "12-12-2006",
-        "height": 300,
-        "weight": 78,
-        "superPowerIds": [
-            "2d3183fd-a6c5-4b14-a7cf-5fb1b15e5f19"
-        ],
-        "superPowerName": [
-            "Strength"
-        ]
-    },
-	  ...
+	    {
+	        "id": "5dfee45c-37e4-4442-80b2-6488a75d5b8c",
+	        "name": "Ana",
+	        "heroName": "Giant",
+	        "birthDate": "12-12-2006",
+	        "height": 300,
+	        "weight": 78,
+	        "superPowerIds": [
+	            "2d3183fd-a6c5-4b14-a7cf-5fb1b15e5f19"
+	        ],
+	        "superPowerName": [
+	            "Strength"
+	        ]
+	    },
+		  ...
 	]
 
 *Get super hero by ID*
@@ -147,5 +147,9 @@ The API uses standard HTTP status codes to indicate the success or failure of an
 201 Created: The resource was successfully created.
 
 400 Bad Request: The request was invalid or cannot be served.
+
+404 Not Found: The requested resource could not be found.
+
+500 Internal Server Error: An error occurred on the server.
 
 
