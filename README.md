@@ -31,8 +31,121 @@ This project is a CRUD (Create, Read, Update, Delete) API for managing super her
 
 ### Installation
 
-1. Clone the repository and initialize submodules:
+1. Clone the repository:
    ```bash
-   git clone --recurse-submodules https://github.com/yourusername/super-hero-crud.git
+   https://github.com/bonissanti/CRUD-CSharp-Angular.git
    cd super-hero-crud
+
+2. Build and run the backend:
+   ```bash
+   dotnet build
+   dotnet run
+
+3. Start frontend:
+   ```bash
+   cd ../frontend/
+   ng serve
+
+### API Endpoints
+
+*Get all super heroes.*
+
+- URL: ```bash /superheroes```
+- Method: ```bash GET```
+- Description: Retrives a list of all super heroes
+- Response:
+   ```bash
+	[
+    {
+        "id": "5dfee45c-37e4-4442-80b2-6488a75d5b8c",
+        "name": "Ana",
+        "heroName": "Giant",
+        "birthDate": "12-12-2006",
+        "height": 300,
+        "weight": 78,
+        "superPowerIds": [
+            "2d3183fd-a6c5-4b14-a7cf-5fb1b15e5f19"
+        ],
+        "superPowerName": [
+            "Strength"
+        ]
+    },
+	  ...
+	]
+
+*Get super hero by ID*
+
+- URL: ```bash /superheroes/{id}```
+- Method: ```bash GET```
+- Description: Retrives a super hero by Id
+- Response:
+   ```bash
+	{
+	    "id": "74a02d99-cbab-48d0-99ed-a192eeeaa0da",
+	    "name": "Mari",
+	    "heroName": "Dra. Mari",
+	    "birthDate": "01-12-2001",
+	    "height": 157,
+	    "weight": 65,
+	    "superPowerIds": [
+	        "09fbaeb0-a0e6-4b01-a14b-98ae91052b0d"
+	    ],
+	    	"superPowerName": [
+	        	"Fly"
+	    ]
+	}
+
+*Create a super hero*
+
+- URL: ```bash /superheroes```
+- Method: ```bash POST```
+- Description: Creeates a new super hero
+- Response:
+   ```bash
+	{
+	  "name": "string",
+	  "heroName": "string",
+	  "birthDate": "2024-12-12T11:38:08.677Z",
+	  "height": 0,
+	  "weight": 0,
+	  "superPowerIds": [
+	    "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+	  ]
+	}
+
+*Update a super hero*
+
+- URL: ```bash /superheroes/{id}```
+- Method: ```bash PUT```
+- Description: Updates a existing super hero
+- Response:
+   ```bash
+	{
+	  "name": "string",
+	  "heroName": "string",
+	  "birthDate": "2024-12-12T11:38:08.677Z",
+	  "height": 0,
+	  "weight": 0,
+	  ]
+	}
+
+*Delete a super hero*
+
+- URL: ```bash /superheroes/{id}```
+- Method: ```bash DELETE```
+- Description: Delete a super hero by their ID
+- Response:  ```bash 204 No Content```
+
+
+### Error Handling
+
+The API uses standard HTTP status codes to indicate the success or failure of an API request. Here are some common status codes:
+   ```bash
+
+200 OK: The request was successful.
+
+201 Created: The resource was successfully created.
+
+400 Bad Request: The request was invalid or cannot be served.
+
 

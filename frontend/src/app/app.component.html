@@ -1,0 +1,111 @@
+<!--GetIdMethod -->
+<div class="search-container">
+  <h1>Super Hero CRUD!</h1>
+  <p>Type an ID below to search:</p>
+  <input type="search" name="" id="" (input)="onInput($event)" (keyup.enter)="onEnter($event)">
+</div>
+
+<div *ngIf="superHero" class="hero-info">
+  <p><strong>Name:</strong> {{ superHero.name }}</p>
+  <p><strong>Hero Name:</strong> {{ superHero.heroName }}</p>
+</div>
+
+<div *ngIf="successMessage" class="success-message">
+  {{ successMessage }}
+</div>
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+</div>
+
+<!--GetMethod PutMethod DeleteMethod-->
+<div>
+  <h2>List of All Super Heroes</h2>
+  <p>Below is the full list of super heroes from the database:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Hero Name</th>
+        <th>Birth Date*</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <!-- <th>Super Powers</th> -->
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let superhero of superheroes$ | async">
+        <td>{{ superhero.name }}</td>
+        <td>{{ superhero.heroName }}</td>
+        <td>{{ superhero.birthDate }}</td>
+        <td>{{ superhero.height }}</td>
+        <td>{{ superhero.weight }}</td>
+        <!--  <td> -->
+        <!-- <select> -->
+        <!--      <option *ngFor="let power of superhero.superPowerNames">{{ superhero.superPowerNames }}</option> -->
+        <!--    </select> -->
+        <!--  </td> -->
+        <td>
+          <button (click)="editSuperHero(superhero)">Update</button>
+          <button (click)="deleteSuperHero(superhero.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--PutMethod-->
+<div *ngIf="selectedSuperHero">
+  <h2>Update Super Hero</h2>
+  <p>Fill in the fields to update the super hero <strong>(*mandatory)</strong>:</p>
+  <form (submit)="updateSuperHero($event)">
+    <label for="name">Name:</label><br>
+    <input type="search" id="name" name="name" [value]="selectedSuperHero.name"><br>
+
+    <label for="heroname">Hero Name:</label><br>
+    <input type="search" id="heroname" name="heroname" [value]="selectedSuperHero.heroName"><br>
+
+    <label for="birthdate">Birth Date<strong>*</strong>:</label><br>
+    <input type="date" id="birthdate" name="birthdate" [value]="selectedSuperHero.birthDate"><br>
+
+    <label for="height">Height:</label><br>
+    <input type="search" id="height" name="height" [value]="selectedSuperHero.height"><br>
+
+    <label for="weight">Weight:</label><br>
+    <input type="search" id="weight" name="weight" [value]="selectedSuperHero.weight"><br>
+
+    <button type="submit">Update Super Hero</button><br>
+  </form>
+</div>
+
+<!--PostMethod-->
+<div>
+  <h2>Add Super Hero to Database</h2>
+  <p>Fill in the fields below to add your super hero:</p>
+  <form (submit)="addSuperHero($event)">
+    <label for="name">Name:</label><br>
+    <input type="search" id="name" name="name"><br>
+
+    <label for="heroname">Hero Name:</label><br>
+    <input type="search" id="heroname" name="heroname"><br>
+
+    <label for="birthdate">Birth Date:</label><br>
+    <input type="date" id="birthdate" name="birthdate"><br>
+
+    <label for="height">Height:</label><br>
+    <input type="search" id="height" name="height"><br>
+
+    <label for="weight">Weight:</label><br>
+    <input type="search" id="weight" name="weight"><br>
+
+    <label for="SuperPowers">Super Powers:</label><br>
+    <select id="SuperPowers" multiple [(ngModel)]="selectedSuperPowers" name="SuperPowers">
+      <option *ngFor="let power of superPowers" [value]="power.id">
+        {{ power.name }} - {{ power.description }}
+      </option>
+    </select><br>
+    <button type="submit">Add Super Hero</button>
+  </form>
+</div>
+

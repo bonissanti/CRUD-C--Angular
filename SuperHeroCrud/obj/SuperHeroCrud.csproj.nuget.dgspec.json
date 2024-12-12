@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/bruno/Documents/Projetos/CSharp/CRUD/project/SuperHeroCrud/SuperHeroCrud.csproj": {}
+    "/home/bruno/Documents/Projetos/CSharp/CRUD/crud/project/SuperHeroCrud/SuperHeroCrud.csproj": {}
   },
   "projects": {
-    "/home/bruno/Documents/Projetos/CSharp/CRUD/project/SuperHeroCrud/SuperHeroCrud.csproj": {
+    "/home/bruno/Documents/Projetos/CSharp/CRUD/crud/project/SuperHeroCrud/SuperHeroCrud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/bruno/Documents/Projetos/CSharp/CRUD/project/SuperHeroCrud/SuperHeroCrud.csproj",
+        "projectUniqueName": "/home/bruno/Documents/Projetos/CSharp/CRUD/crud/project/SuperHeroCrud/SuperHeroCrud.csproj",
         "projectName": "SuperHeroCrud",
-        "projectPath": "/home/bruno/Documents/Projetos/CSharp/CRUD/project/SuperHeroCrud/SuperHeroCrud.csproj",
+        "projectPath": "/home/bruno/Documents/Projetos/CSharp/CRUD/crud/project/SuperHeroCrud/SuperHeroCrud.csproj",
         "packagesPath": "/home/bruno/.nuget/packages/",
-        "outputPath": "/home/bruno/Documents/Projetos/CSharp/CRUD/project/SuperHeroCrud/obj/",
+        "outputPath": "/home/bruno/Documents/Projetos/CSharp/CRUD/crud/project/SuperHeroCrud/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/bruno/.nuget/NuGet/NuGet.Config"
