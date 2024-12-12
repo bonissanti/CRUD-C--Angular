@@ -34,7 +34,7 @@ This project is a CRUD (Create, Read, Update, Delete) API for managing super her
 1. Clone the repository:
    ```bash
    https://github.com/bonissanti/CRUD-CSharp-Angular.git
-   cd super-hero-crud
+   cd SuperHeroCrud
 
 2. Build and run the backend:
    ```bash
@@ -45,10 +45,10 @@ This project is a CRUD (Create, Read, Update, Delete) API for managing super her
    ```bash
    cd ../frontend/
    ng serve
-
+---
 ### API Endpoints
 
-*Get all super heroes.*
+**Get all super heroes.**
 
 - URL: ```bash /superheroes```
 - Method: ```bash GET```
@@ -73,7 +73,8 @@ This project is a CRUD (Create, Read, Update, Delete) API for managing super her
 		  ...
 	]
 
-*Get super hero by ID*
+
+**Get super hero by ID**
 
 - URL: ```bash /superheroes/{id}```
 - Method: ```bash GET```
@@ -95,7 +96,8 @@ This project is a CRUD (Create, Read, Update, Delete) API for managing super her
 	    ]
 	}
 
-*Create a super hero*
+
+**Create a super hero**
 
 - URL: ```bash /superheroes```
 - Method: ```bash POST```
@@ -113,7 +115,8 @@ This project is a CRUD (Create, Read, Update, Delete) API for managing super her
 	  ]
 	}
 
-*Update a super hero*
+
+**Update a super hero**
 
 - URL: ```bash /superheroes/{id}```
 - Method: ```bash PUT```
@@ -129,13 +132,15 @@ This project is a CRUD (Create, Read, Update, Delete) API for managing super her
 	  ]
 	}
 
-*Delete a super hero*
+
+**Delete a super hero**
 
 - URL: ```bash /superheroes/{id}```
 - Method: ```bash DELETE```
 - Description: Delete a super hero by their ID
 - Response:  ```bash 204 No Content```
 
+---
 
 ### Error Handling
 
